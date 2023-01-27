@@ -6,21 +6,20 @@ IF OBJECT_ID('tempdb..@concept_counts_table', 'U') IS NOT NULL
 } : {
 IF OBJECT_ID('@work_database_schema.@concept_counts_table', 'U') IS NOT NULL
 	DROP TABLE @work_database_schema.@concept_counts_table;
-} : {
+}
 
 IF OBJECT_ID('results.concept_counts_perm4', 'U') IS NOT NULL
 	SELECT concept_id,
-	concept_count,
-	concept_subjects
+		concept_count,
+		concept_subjects
 	{@table_is_temp} ? {
 	INTO @concept_counts_table
 	} : { 
 	INTO @work_database_schema.@concept_counts_table
 	}
-	FROM results.concept_counts_perm4 ;
-
- ELSE   
-    SELECT concept_id,
+	FROM results.concept_counts_perm4
+ELSE
+	SELECT concept_id,
 	concept_count,
 	concept_subjects
 	{@table_is_temp} ? {
@@ -106,5 +105,4 @@ IF OBJECT_ID('results.concept_counts_perm4', 'U') IS NOT NULL
 			COUNT_BIG(DISTINCT person_id) AS concept_subjects
 		FROM @cdm_database_schema.observation
 		GROUP BY observation_source_concept_id
-		) tmp;
-}
+		) tmp
