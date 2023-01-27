@@ -16,4 +16,4 @@ INTO @concept_counts_table
 } : { 
 INTO @work_database_schema.@concept_counts_table
 }
-FROM results.concept_counts_perm3 ;
+FROM results.concept_counts_perm4 ;
