@@ -4,14 +4,14 @@
 \alias{createCountsTable}
 \title{Function to create the counts table}
 \usage{
-createCountsTable(connection, cdmDatabaseSchema, writeDatabaseSchema)
+createCountsTable(connectionDetails, cdmDatabaseSchema, writeDatabaseSchema)
 }
 \arguments{
-\item{connection}{Connection to tha database created with DatabaseConnector}
-
 \item{cdmDatabaseSchema}{Schema where cdm is stored}
 
 \item{writeDatabaseSchema}{Schema where table should be created}
+
+\item{connection}{Connection to tha database created with DatabaseConnector}
 }
 \description{
 Function to create the counts table

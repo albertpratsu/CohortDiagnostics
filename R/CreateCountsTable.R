@@ -22,12 +22,13 @@
 #' 
 #' @export
 #' 
-#' @return 
+#' @return NULL
 #' @example 
 #' 
-createCountsTable <- function(connection,
+createCountsTable <- function(connectionDetails,
                               cdmDatabaseSchema,
                               writeDatabaseSchema) {
+  connection <- DatabaseConnector::connect(connectionDetails)
   sql <-
     SqlRender::loadRenderTranslateSql(
       "CreationOfConceptCountTable.sql",
@@ -45,12 +46,10 @@ createCountsTable <- function(connection,
 #' 
 #' @noRd
 #' 
-#' @return 
-#' @example 
-#' 
-createCountsTableSample <- function(connection,
+createCountsTableSample <- function(connectionDetails,
                                     cdmDatabaseSchema,
                                     writeDatabaseSchema) {
+  connection <- DatabaseConnector::connect(connectionDetails)
   sql <-
     SqlRender::loadRenderTranslateSql(
       "CreationOfConceptCountTableL100.sql",
