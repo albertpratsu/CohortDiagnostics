@@ -14,6 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+#' Function to create the counts table
+#' 
 #' @param connection Connection to tha database created with DatabaseConnector
 #' @param cdmDatabaseSchema Schema where cdm is stored
 #' @param writeDatabaseSchema Schema where table should be created
