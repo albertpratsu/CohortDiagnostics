@@ -408,7 +408,7 @@ runConceptSetDiagnostics <- function(connection,
       connection = connection,
       cdmDatabaseSchema = cdmDatabaseSchema,
       tempEmulationSchema = tempEmulationSchema,
-      conceptCountsDatabaseSchema = conceptCountsDatabaseSchema,
+      conceptCountsDatabaseSchema = cohortDatabaseSchema,
       conceptCountsTable = conceptCountsTable,
       conceptCountsTableIsTemp = conceptCountsTableIsTemp
     )

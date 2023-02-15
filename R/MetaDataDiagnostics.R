@@ -113,7 +113,6 @@ createConceptCountsTable <- function(connectionDetails = NULL,
       packageName = utils::packageName(),
       dbms = connection@dbms,
       tempEmulationSchema = tempEmulationSchema,
-      cdm_database_schema = cdmDatabaseSchema,
       work_database_schema = conceptCountsDatabaseSchema,
       concept_counts_table = conceptCountsTable,
       table_is_temp = conceptCountsTableIsTemp
