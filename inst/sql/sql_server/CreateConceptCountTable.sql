@@ -16,4 +16,4 @@ INTO @concept_counts_table
 } : { 
 INTO @work_database_schema.@concept_counts_table
 }
-FROM @work_database_schema.cohort_diagnostics_concept_counts_permanent_table ;
+FROM SELECT * FROM '@work_database_schema'.cohort_diagnostics_concept_counts_permanent_table ;
